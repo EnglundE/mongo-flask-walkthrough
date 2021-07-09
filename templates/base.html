@@ -39,7 +39,11 @@
           ></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="{{ url_for('get_tasks') }}">Home</a></li>
-            <li><a href="#">Profile</a></li>
+            <li>
+              <a href="{{ url_for('profile', username=session['users']) }}"
+                >Profile</a
+              >
+            </li>
             <li><a href="#">New Task</a></li>
             <li><a href="#">Manage Categories</a></li>
             <li><a href="#">Log Out</a></li>
@@ -56,7 +60,11 @@
           </h4>
         </li>
         <li><a href="{{ url_for('get_tasks') }}">Home</a></li>
-        <li><a href="#">Profile</a></li>
+        <li>
+          <a href="{{ url_for('profile', username=session['users']) }}"
+            >Profile</a
+          >
+        </li>
         <li><a href="#">New Task</a></li>
         <li><a href="#">Manage Categories</a></li>
         <li><a href="#">Log Out</a></li>
